@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="white=device-width, initial-scale1.0">
+        <title>Cancún - Caribe Mexicano </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+        <title>Turismo en Cancún | Destinos turísticos de México</title>
+        <meta name="description" content="Conoce Cancún, uno de los principales destinos turísticos de México: playas, actividades y cultura.">
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                color: #333;
+                background-color: #f8f9fa;
+            }
+            header {
+                background-color: #00acc1;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            nav {
+                background: #f4f4f4; 
+                padding: 10px 10px;
+                display: flex; 
+                align-items: center; 
+                justify-content: space-between;
+            }
+            nav a {
+                text-decoration: none;
+                color: #0056b3;
+                font-weight: bold;
+                margin: 0 15px;
+            }
+            main {
+                max-width: 900px;
+                margin: 20px auto;
+                padding: 20px;
+                text-align: center;
+            }
+            .galeria {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+            .galeria img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .galeria img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                cursor: pointer;
+
+            }
+            
+            .home-link {
+                text-decoration: none;
+                color: #0056b3;
+                font-weight: bold;
+                font-size: .85em;
+                padding: 2px 5px;
+                transition: 0.3s;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0px;
+                margin-right: auto;
+                margin-left: 0;
+                width: fit-content;
+            }
+            .home-link:hover {
+                color: #003d80;
+                transform: scale(1.05);
+            }
+            .home-icon {
+                font-size: 1.1em;
+                margin-bottom: -2px;
+            }
+            #contacto {
+            border: 2px solid #000;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-color: #dae292f8;
+            max-width: 400px;
+            width: fit-content;
+            }
+            .dropdown {
+                    position: relative;
+                    display: inline-block;
+                    
+            }
+            .dropdown-btn {
+                    background-color: #f01d1d;
+                    color: white;
+                    padding: 8px 16px;
+                    font-size: 14px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    
+            } 
+            .dropdown-btn:hover {
+                background-color: #003d80;
+                transform: translateY(-1px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: white;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    border-radius: 5px;
+                    overflow: hidden;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+            .Historia-cancun {
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                margin: 40px 0;
+            }
+            
+
+            .seccion-header {
+                text-align: center;
+                margin-bottom: 25px;
+                width: 100%;
+            }
+
+            .seccion-header h3 {
+                color: #0056b3;
+                font-size: 1.8em;
+                margin: 0;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .columnas-texto {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                text-align: left;
+            }
+
+            .highlight-box {
+                grid-column: 1 / -1;
+                background-color: #e0f7fa;
+                border-left: 6px solid #0056b3;
+                padding: 20px;
+                border-radius: 5px;
+                font-style: italic;
+                margin-top: 15px;
+                text-align: left;
+                box-sizing: border-box;
+            }
+            
+            .info-box {
+                background: #f1f1f1;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 30px 0;
+                text-align: center;
+            }
+
+            footer {
+                background: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                margin-top: 40px;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Explora Cancún</h1>
+            <p>Sol, Playa y el Azul Incomparable del Caribe</p>
+        </header>
+            <nav style="display: flex; justify-content: flex-start; padding-left: 10px;">
+                <a href="index.html" class="home-link">
+                <span class="home-icon">🏠</span>
+                <span>Home</span>
+                </a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Otros Destinos ▼</button>
+                        <div class="dropdown-content">
+                            <a href="chiapas.html">Chiapas</a>
+                            <a href="oaxaca.html">Oaxaca</a>
+                            <a href="veracruz.html">Veracruz</a>
+                        </div>
+                </div>
+            </nav>
+
+        <main>
+            <section>
+                <h2>El paraíso de arena blanca y mar turquesa</h2>
+                <p>Cancún es reconocido mundialmente por sus espectaculares playas y su vibrante vida nocturna.
+                     Es la puerta de entrada al mundo Maya y ofrece una combinación perfecta de relajación y aventura.
+                </p>
+            
+                <div class="galeria">
+                    <img src="Cancun/cancun_1.jpg" alt="Playa de Cancún"> 
+                    <img src="Cancun/cancun_2.jpg" alt="Zona Hotelera">
+                </div>
+            </section>
+            
+            <section class="info-box">
+                <h3>¿Qué hacer en Cancún?</h3>
+                <ul style="text-align: left; display: inline-block;">
+                <li>Visitar Playa Delfines (El Mirador).</li>
+                <li>Hacer un tour a Isla Mujeres.</li>
+                <li>Explorar el Museo Subacuático de Arte (MUSA).</li>
+                <li>Disfrutar de la gastronomía local en el Parque de las Palapas.</li>
+                </ul>
+            </section>
+        
+        <section class="Historia-cancun">
+            <div class="seccion-header">
+                <h3><i class="fas fa-map-marker-alt"></i> Ubicación Geográfica</h3>
+            </div>
+            <div class="columnas-texto">
+            <div class="col-izq">                
+                <p>Cancún se localiza en la costa noreste del estado de <strong>Quintana Roo</strong>, en la Península de Yucatán, México.
+                     Sus coordenadas geográficas son 21°09′38″N 86°50′51″O.
+                </p>
+                <p>Limita al oriente con el Mar Caribe, al norte con el municipio de Isla Mujeres y al oeste con el municipio de Lázaro Cárdenas,
+                     formando parte fundamental del corredor turístico denominado <em>Riviera Maya</em>.
+                </p>
+            </div>
+            <div class="col-der">
+                <p>A diferencia de otras ciudades coloniales, Cancún fue un <strong>Centro Turísticamente Planificado (CIP)</strong>.
+                     En 1969, la zona era una isla desierta habitada solo por unos pocos pescadores.
+                </p>
+            </div>
+                <div class="highlight-box">
+                    <strong>Dato clave:</strong> El proyecto fue financiado por el Banco de México y el BID en 1970, buscando diversificar
+                     la economía nacional. Antes de su desarrollo, el nombre original en maya era <em>Ka'an Kun</em>, que significa "nido de serpientes".
+            </div>
+
+        </section>
+
+
+
+
+        </main>
+
+        <footer>
+            <p>Actividad Integradora - Destinos Turísticos de México</p>
+        </footer>
+
+
+    </body>
+</html>

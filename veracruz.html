@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="white=device-width, initial-scale1.0">
+        <title>Veracruz - El Puerto </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                color: #333;
+                background-color: #f8f9fa;
+            }
+            header {
+                background-color: #a52a2a;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            nav {
+                background: #f4f4f4; 
+                padding: 10px 10px;
+                display: flex; 
+                align-items: center; 
+                justify-content: space-between;
+            }
+            nav a {
+                text-decoration: none;
+                color: #0056b3;
+                font-weight: bold;
+                margin: 0 15px;
+            }
+            main {
+                max-width: 900px;
+                margin: 20px auto;
+                padding: 20px;
+                text-align: center;
+            }
+            .galeria {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+            .galeria img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .galeria img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                cursor: pointer;
+
+            }
+            
+            .home-link {
+                text-decoration: none;
+                color: #a52a2a;
+                font-weight: bold;
+                font-size: .85em;
+                padding: 2px 5px;
+                transition: 0.3s;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0px;
+                margin-right: auto;
+                margin-left: 0;
+                width: fit-content;
+            }
+            .home-link:hover {
+                transform: scale(1.1);
+            }
+            .home-icon {
+                font-size: 1.1em;
+                margin-bottom: -2px;
+            }
+            #contacto {
+            border: 2px solid #000;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-color: #dae292f8;
+            max-width: 400px;
+            width: fit-content;
+            }
+            .dropdown {
+                    position: relative;
+                    display: inline-block;
+                    
+            }
+            .dropdown-btn {
+                    background-color: #f01d1d;
+                    color: white;
+                    padding: 8px 16px;
+                    font-size: 14px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    
+            } 
+            .dropdown-btn:hover {
+                background-color: #003d80;
+                transform: translateY(-1px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: white;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    border-radius: 5px;
+                    overflow: hidden;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+            .Historia-seccion {
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                margin: 40px 0;
+            }
+
+            .seccion-header {
+                text-align: center;
+                margin-bottom: 25px;
+                width: 100%;
+            }
+
+            .seccion-header h3 {
+                color: #0056b3;
+                font-size: 1.8em;
+                margin: 0;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .columnas-texto {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                text-align: left;
+            }
+
+            .highlight-box {
+                grid-column: 1 / -1;
+                background-color: #e7f3ff;
+                border-left: 6px solid #0056b3;
+                padding: 20px;
+                border-radius: 5px;
+                font-style: italic;
+                margin-top: 15px;
+                text-align: left;
+                box-sizing: border-box;
+            }
+            
+            .info-box {
+                background: #fff5ee;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 30px 0;
+                text-align: center;
+            }
+
+            footer {
+                background: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                margin-top: 40px;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Explora Veracruz</h1>
+            <p>Cuna de la historia y el café</p>
+        </header>
+            <nav style="display: flex; justify-content: flex-start; padding-left: 10px;">
+                <a href="index.html" class="home-link">
+                <span class="home-icon">🏠</span>
+                <span>Home</span>
+                </a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Otros Destinos ▼</button>
+                        <div class="dropdown-content">
+                            <a href="chiapas.html">Chiapas</a>
+                            <a href="oaxaca.html">Oaxaca</a>
+                            <a href="cancun.html">Cancún</a>
+                        </div>
+                </div>
+            </nav>
+
+        <main>
+            <section>
+                <h2>Riqueza Histórica y Sabor Jarocho</h2>
+                <p>Veracruz es el puerto más importante de México. Un destino donde la música de marimba, 
+                    el aroma a café recién tostado y la brisa del Golfo se mezclan para crear una experiencia inolvidable.
+                </p>            
+                <div class="galeria">
+                    <img src="Veracruz/malecon.jpg" alt="Malecón de Veracruz"> 
+                    <img src="Veracruz/san_juan_ulua.jpg" alt="Fuerte de San Juan de Ulúa">
+                </div>
+            </section>
+            
+            <section class="info-box">
+                <h3>¿Qué hacer en el Puerto?</h3>
+                <ul style="text-align: left; display: inline-block;">
+                <li>Tomar un "Lechero" en el Gran Café de la Parroquia.</li>
+                <li>Recorrer la imponente fortaleza de San Juan de Ulúa.</li>
+                <li>Caminar por el Malecón al atardecer.</li>
+                <li>Visitar el Acuario de Veracruz, uno de los mejores de América.</li>
+                </ul>
+            </section>
+        
+        <section class="Historia-seccion">
+            <div class="seccion-header">
+                <h3><i class="fas fa-map-marker-alt"></i> Ubicación y Fundación</h3>
+            </div>
+            <div class="columnas-texto">
+            <div class="col-izq">                
+                <p>Se ubica en la costa central del estado de <strong>Veracruz de Ignacio de la Llave</strong>, a orillas del Golfo de México.
+                     Es un punto estratégico comercial desde hace siglos.
+                </p>                
+                <p>Limita al norte con el municipio de La Antigua y al sur con Boca del Río, ciudad con la que forma una zona metropolitana moderna.
+                </p> 
+            </div>
+            <div style="text-align: left;">
+                <p>Fundada por Hernán Cortés en 1519 como <em>Villa Rica de la Vera Cruz</em>, fue el primer ayuntamiento establecido por
+                     europeos en el continente americano.</p>
+                <p>Ha sido nombrada <strong>"Cuatro Veces Heroica"</strong> por defender la soberanía nacional ante diversas invasiones extranjeras.</p>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>Dato histórico:</strong> San Juan de Ulúa fue la última fortaleza española en rendirse tras la Independencia de México en 1825.
+                 Además, Veracruz es la cuna del "Son Jarocho" y la famosa canción "La Bamba". 
+            </div>
+            </div>
+        </section>
+
+        </main>
+
+        <footer>
+            <p>Actividad Integradora - Destinos Turísticos de México</p>
+        </footer>
+
+
+    </body>
+</html>

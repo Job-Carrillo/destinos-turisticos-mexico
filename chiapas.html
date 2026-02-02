@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="white=device-width, initial-scale1.0">
+        <title>Chiapas - Espíritu del Mundo Maya </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                color: #333;
+                background-color: #f8f9fa;
+            }
+            header {
+                background-color: #2d5a27;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            nav {
+                background: #f4f4f4; 
+                padding: 10px 10px;
+                display: flex; 
+                align-items: center; 
+                justify-content: space-between;
+            }
+            nav a {
+                text-decoration: none;
+                color: #0056b3;
+                font-weight: bold;
+                margin: 0 15px;
+            }
+            main {
+                max-width: 900px;
+                margin: 20px auto;
+                padding: 20px;
+                text-align: center;
+            }
+            .galeria {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+            .galeria img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .galeria img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                cursor: pointer;
+
+            }
+            
+            .home-link {
+                text-decoration: none;
+                color: #a52a2a;
+                font-weight: bold;
+                font-size: .85em;
+                padding: 2px 5px;
+                transition: 0.3s;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0px;
+                margin-right: auto;
+                margin-left: 0;
+                width: fit-content;
+            }
+            .home-link:hover {
+                transform: scale(1.1);
+            }
+            .home-icon {
+                font-size: 1.1em;
+                margin-bottom: -2px;
+            }
+            #contacto {
+            border: 2px solid #000;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-color: #dae292f8;
+            max-width: 400px;
+            width: fit-content;
+            }
+            .dropdown {
+                    position: relative;
+                    display: inline-block;
+                    
+            }
+            .dropdown-btn {
+                    background-color: #f01d1d;
+                    color: white;
+                    padding: 8px 16px;
+                    font-size: 14px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    
+            } 
+            .dropdown-btn:hover {
+                background-color: #003d80;
+                transform: translateY(-1px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: white;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    border-radius: 5px;
+                    overflow: hidden;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+            .Historia-seccion {
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+                margin: 40px 0;
+            }
+
+            .seccion-header {
+                text-align: center;
+                margin-bottom: 25px;
+                width: 100%;
+            }
+
+            .seccion-header h3 {
+                color: #0056b3;
+                font-size: 1.8em;
+                margin: 0;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .columnas-texto {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                text-align: left;
+            }
+
+            .highlight-box {
+                grid-column: 1 / -1;
+                background-color: #f1f8f0;
+                border-left: 6px solid #0056b3;
+                padding: 20px;
+                border-radius: 5px;
+                font-style: italic;
+                margin-top: 15px;
+                text-align: left;
+                box-sizing: border-box;
+            }
+            
+            .info-box {
+                background: #fdfae6;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 30px 0;
+                text-align: center;
+            }
+
+            footer {
+                background: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                margin-top: 40px;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Explora Chiapas</h1>
+            <p>Aventura, Selva y Tradición Milenaria</p>
+        </header>
+            <nav style="display: flex; justify-content: flex-start; padding-left: 10px;">
+                <a href="index.html" class="home-link">
+                <span class="home-icon">🏠</span>
+                <span>Home</span>
+                </a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Otros Destinos ▼</button>
+                        <div class="dropdown-content">
+                            <a href="veracruz.html">Veracruz</a>
+                            <a href="oaxaca.html">Oaxaca</a>
+                            <a href="cancun.html">Cancún</a>
+                        </div>
+                </div>
+            </nav>
+
+        <main>
+            <section>
+                <h2>Naturaleza y Cultura Maya</h2>
+                <p>Chiapas es uno de los estados más biodiversos de México. Un lugar donde las zonas arqueológicas emergen
+                     de la selva y las cascadas turquesas te quitan el aliento.
+                </p>
+                </p>            
+                <div class="galeria">
+                    <img src="Chiapas/palenque.jpg" alt="Zona Arqueológica de Palenque"> 
+                    <img src="Chiapas/sumidero.jpg" alt="Cañón del Sumidero">
+                </div>
+            </section>
+            
+            <section class="info-box">
+                <h3>¿Qué visitar en Chiapas?</h3>
+                <ul style="text-align: left; display: inline-block;">
+                <li>Navegar por el majestuoso Cañón del Sumidero.</li>
+                <li>Explorar las pirámides de Palenque, joya del mundo maya.</li>
+                <li>Maravillarse con el azul de las Cascadas de Agua Azul.</li>
+                <li>Caminar por las calles empedradas de San Cristóbal de las Casas.</li>
+                </ul>
+            </section>
+        
+        <section class="Historia-seccion">
+            <div class="seccion-header">
+                <h3><i class="fas fa-map-marker-alt"></i> Ubicación y Geografía</h3>
+            </div>
+            <div class="columnas-texto">
+            <div class="col-izq">                
+                <p>Se localiza en el extremo sureste de México. Limita al norte con Tabasco, al oeste con Veracruz y Oaxaca,
+                     y al sur con el <strong>Océano Pacífico</strong>.
+                </p>                              
+                <p>Hacia el este comparte una extensa frontera con la República de <strong>Guatemala</strong>, siendo una puerta cultural clave con Centroamérica.
+                </p>
+            </div>
+            <div class="col-der">
+                <p>Su geografía es accidentada y fascinante, compuesta por la Sierra Madre de Chiapas y la Selva Lacandona, uno de los pulmones más importantes de América.
+                </p>
+                <p>Es hogar de diversos grupos étnicos como los Tzotziles y Tzeltales, quienes preservan lenguas y costumbres ancestrales hasta el día de hoy.
+                </p>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>Dato clave:</strong> Chiapas se integró formalmente a México en 1824 tras un proceso de federación. 
+                Es el principal productor de café orgánico en el país y cuenta con el mayor número de especies de aves en todo México.
+            </div>
+        </section>
+
+        </main>
+
+        <footer>
+            <p>Actividad Integradora - Destinos Turísticos de México</p>
+        </footer>
+
+
+    </body>
+</html>
