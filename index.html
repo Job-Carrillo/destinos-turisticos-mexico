@@ -182,6 +182,47 @@
             color: #333;
         }
 
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .logo-mexico {
+                margin: 0 auto 10px;
+                width: 120px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .menu-horizontal {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-horizontal img {
+                width: 280px; /* Imágenes más grandes para que luzcan en el cel */
+                height: 180px;
+            }
+
+            .grid-formulario {
+                grid-template-columns: 1fr; /* Una sola columna */
+                gap: 20px;
+            }
+
+            .label-centrada, #mensaje, .boton-enviar {
+                grid-column: span 1;
+            }
+
+            #contacto {
+                padding: 20px;
+            }
+
+            button[type="submit"] {
+                width: 100%; /* El botón ocupa todo el ancho */
+            }
         
     </style>
 </head>
@@ -294,45 +335,37 @@
             
             
             <div class="boton-enviar">
-                <button type="submit">Enviar</button>
-            </div>
-                        </form>
+            <button type="submit">Enviar</button>
+        </div>
+        </div>
+    </form> 
+     <script>
+        const form = document.getElementById("my-form");
 
-            </div>
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
 
-            <script>
-                const form = document.getElementById("my-form");
-        
-            async function handleSubmit(event) {
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert("¡Éxito! Tu mensaje ha sido enviado.");
+                    form.reset();
+                } else {
+                    alert("Oops! Hubo un problema al enviar el formulario.");
+                }
+            }).catch(error => {
+                alert("Oops! Hubo un problema de conexión.");
+            });
+        }
+    
 
-                event.preventDefault();
-                const data = new FormData(event.target);
-                
-                fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                }).then(response => {
-                    if (response.ok) {
-                        alert("¡Éxito! Tu mensaje ha sido enviado.");
-                        form.reset();
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                alert(data["errors"].map(error => error["message"]).join(", "));
-                            } else {
-                                alert("Oops! Hubo un problema al enviar el formulario.");
-                            }
-                        });
-                    }
-                }).catch(error => {
-                    alert("Oops! Hubo un problema de conexión.");
-                });
-            }
-            
-            form.addEventListener("submit", handleSubmit);
+        form.addEventListener("submit", handleSubmit);
             </script>
         </form>
     </section>
