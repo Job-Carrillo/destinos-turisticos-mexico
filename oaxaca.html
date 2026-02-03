@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="white=device-width, initial-scale1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Oaxaca - Tierra del Sol y la Cultura</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
 
@@ -13,7 +13,6 @@
                 margin: 0;
                 padding: 0;
                 color: #333;
-                background-color: #f8f9fa;
             }
             header {
                 background-color: #6a1b9a;
@@ -189,7 +188,48 @@
                 padding: 20px;
                 margin-top: 40px;
             }
-            
+            @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .logo-mexico {
+                margin: 0 auto 10px;
+                width: 120px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .menu-horizontal {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-horizontal img {
+                width: 280px;
+                height: 180px;
+            }
+
+            .grid-formulario {
+                grid-template-columns: 1fr; 
+                gap: 20px;
+            }
+
+            .label-centrada, #mensaje, .boton-enviar {
+                grid-column: span 1;
+            }
+
+            #contacto {
+                padding: 20px;
+            }
+
+            button[type="submit"] {
+                width: 100%; 
+            }
+        }
             
         </style>
     </head>
@@ -253,8 +293,8 @@
             </div>
             
             <div class="highlight-box">
-                <strong>Dato clave:</strong> Oaxaca es la cuna del Benemérito de las Américas, Benito Juárez. Además, 
-                es mundialmente famoso por su "Barro Negro", los alebrijes de Arrazola y por ser el mayor productor de Mezcal artesanal en el mundo.
+<strong>Dato clave:</strong> Oaxaca es la cuna del Benemérito de las Américas, Benito Juárez. Además, 
+es mundialmente famoso por su "Barro Negro", los alebrijes de Arrazola y por ser el mayor productor de Mezcal artesanal en el mundo.
         </section>
 
         </main>
