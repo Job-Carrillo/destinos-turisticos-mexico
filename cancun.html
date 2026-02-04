@@ -2,25 +2,35 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="white=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cancún - Caribe Mexicano </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
 
         <style>
             body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                margin: 0;
-                padding: 0;
-                color: #333;
+                font-family: 'Segoe UI';
+                line-height: 17px;
+                color: #2c3e50;
                 background-color: #f8f9fa;
+                
             }
             header {
                 background-color: #00acc1;
                 color: white;
                 padding: 20px;
                 text-align: center;
+                font-size: 2rem;
             }
+            header p {
+                font-size: 1.6rem;
+                opacity: 0.9;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+                color: #007c91;
+                margin-bottom: 20px;
+            }       
             nav {
                 background: #f4f4f4; 
                 padding: 10px 10px;
@@ -52,7 +62,7 @@
                 height: 200px;
                 object-fit: cover;
                 border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                box-shadow: 0 6px 15px rgba(0,0,0,0.15);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
             .galeria img:hover {
@@ -133,13 +143,16 @@
             .dropdown-content a:hover {
                 background-color: #f1f1f1;
             }
-            .Historia-cancun {
+            .Historia-cancun p {
                 background-color: #ffffff;
-                padding: 30px;
+                padding: 40px;
                 border-radius: 15px;
                 box-shadow: 0 4px 15px rgba(0,0,0,0.05);
                 margin: 40px 0;
-            }
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+                text-align: justify;
+                }
             
 
             .seccion-header {
@@ -155,6 +168,7 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 10px;
+                padding-bottom: 10px;
             }
 
             .columnas-texto {
@@ -174,7 +188,10 @@
                 margin-top: 15px;
                 text-align: left;
                 box-sizing: border-box;
-            }
+                font-size: 1.2rem;
+                line-height: 1.5;
+                color: #006064;
+                }
             
             .info-box {
                 background: #f1f1f1;
@@ -182,14 +199,23 @@
                 border-radius: 10px;
                 margin: 30px 0;
                 text-align: center;
+                margin-bottom: 10px;
+                line-height: 1.5;
+                font-size: 1.2rem;
             }
 
             footer {
                 background: #333;
                 color: white;
-                text-align: center;
                 padding: 20px;
                 margin-top: 40px;
+            }
+            .parrafo-principal {
+                font-size: 1.2rem;
+                line-height: 1.8;
+                max-width: 800px;
+                margin: 20px auto;
+                color: #34495e;
             }
             
             
@@ -218,7 +244,7 @@
         <main>
             <section>
                 <h2>El paraíso de arena blanca y mar turquesa</h2>
-                <p>Cancún es reconocido mundialmente por sus espectaculares playas y su vibrante vida nocturna.
+                <p class="parrafo-principal">Cancún es reconocido mundialmente por sus espectaculares playas y su vibrante vida nocturna.
                      Es la puerta de entrada al mundo Maya y ofrece una combinación perfecta de relajación y aventura.
                 </p>
             
@@ -227,7 +253,7 @@
                     <img src="Cancun/cancun_2.jpg" alt="Zona Hotelera">
                 </div>
             </section>
-            
+           
             <section class="info-box">
                 <h3>¿Qué hacer en Cancún?</h3>
                 <ul style="text-align: left; display: inline-block;">
@@ -237,7 +263,7 @@
                 <li>Disfrutar de la gastronomía local en el Parque de las Palapas.</li>
                 </ul>
             </section>
-        
+        <br>
         <section class="Historia-cancun">
             <div class="seccion-header">
                 <h3><i class="fas fa-map-marker-alt"></i> Ubicación Geográfica</h3>

@@ -2,17 +2,15 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="white=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Chiapas - Espíritu del Mundo Maya </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
 
         <style>
             body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                margin: 0;
-                padding: 0;
-                color: #333;
+                font-family: 'Segoe UI';
+                line-height: 17px;
+                color: #2c3e50;
                 background-color: #f8f9fa;
             }
             header {
@@ -20,6 +18,8 @@
                 color: white;
                 padding: 20px;
                 text-align: center;
+                font-size: 2rem;
+                
             }
             nav {
                 background: #f4f4f4; 
@@ -35,24 +35,26 @@
                 margin: 0 15px;
             }
             main {
-                max-width: 900px;
+                max-width: 1000px;
                 margin: 20px auto;
                 padding: 20px;
                 text-align: center;
+                font-size: 1.25rem;
+                
             }
             .galeria {
                 display: flex;
                 justify-content: center;
-                gap: 15px;
+                gap: 20px;
                 flex-wrap: wrap;
                 margin-top: 20px;
             }
             .galeria img {
                 width: 300px;
-                height: 200px;
+                height: 250px;
                 object-fit: cover;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                border-radius: 15px;
+                box-shadow: 0 6px 15px rgba(0,0,0,0.15);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
             .galeria img:hover {
@@ -134,62 +136,88 @@
             }
             .Historia-seccion {
                 background-color: #ffffff;
-                padding: 30px;
-                border-radius: 15px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.01);
-                margin: 40px 0;
+                padding: 50px;
+                border-radius: 25px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                margin: 50px 0;
             }
 
             .seccion-header {
                 text-align: center;
                 margin-bottom: 25px;
                 width: 100%;
+                color: #1b3d17;
+                font-size: 2rem;
             }
 
             .seccion-header h3 {
-                color: #0056b3;
-                font-size: 1.8em;
-                margin: 0;
-                display: inline-flex;
-                align-items: center;
-                gap: 10px;
-            }
+                color: #1b3d17;
+                font-size: 2.2rem;
+                margin-bottom: 35px;
+                
+                display: inline-block;
+                padding-bottom: 10px;
+                }
 
             .columnas-texto {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 30px;
+                gap: 50px;
                 text-align: left;
-            }
+                font-size: 1.15rem;
+                line-height: 1.8;
+                color: #444;
+                }
 
             .highlight-box {
                 grid-column: 1 / -1;
-                background-color: #f1f8f0;
-                border-left: 6px solid #0056b3;
-                padding: 20px;
-                border-radius: 5px;
+                background-color: #f9fbe7;
+                border-left: 8px solid #827717;
+                padding: 30px;
+                border-radius: 8px;
                 font-style: italic;
-                margin-top: 15px;
+                margin-top: 40px;
                 text-align: left;
                 box-sizing: border-box;
-            }
+                font-size: 1.2rem;
+                margin-top: 30px;
+                line-height: 1.5;
+                
+                }
             
             .info-box {
-                background: #fdfae6;
-                padding: 20px;
-                border-radius: 10px;
-                margin: 30px 0;
+                background: #f1f8e9;
+                padding: 35px;
+                border-radius: 15px;
+                margin: 40px 0;
                 text-align: center;
+                font-size: 1.3rem;
+                line-height: 1.6;
+                margin-bottom: 15px;
+                color: #2d5a27;
+                border: 1px solid #c5e1a5;
             }
 
             footer {
                 background: #333;
                 color: white;
-                text-align: center;
                 padding: 20px;
                 margin-top: 40px;
             }
-            
+            section h2 {
+                font-size: 2.2rem;
+                color: #1b3d17;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            section p {
+                font-size: 1.25rem;
+                line-height: 1.8;
+                color: #444;
+                max-width: 800px;
+                margin: 0 auto 30px auto;
+                text-align: center;
+            }
             
         </style>
     </head>
@@ -219,7 +247,7 @@
                 <p>Chiapas es uno de los estados más biodiversos de México. Un lugar donde las zonas arqueológicas emergen
                      de la selva y las cascadas turquesas te quitan el aliento.
                 </p>
-                </p>            
+                <br>            
                 <div class="galeria">
                     <img src="Chiapas/palenque.jpg" alt="Zona Arqueológica de Palenque"> 
                     <img src="Chiapas/sumidero.jpg" alt="Cañón del Sumidero">
