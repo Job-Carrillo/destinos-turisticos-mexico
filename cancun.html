@@ -262,95 +262,90 @@
                 background: rgba(0,0,0,0.8);
             }
 
-           Aquí tienes el bloque completo y corregido de tu @media. He unificado los estilos para que el carrusel se adapte perfectamente, la galería no se rompa y el menú sea cómodo de usar en pantallas pequeñas.
-
-Busca tu sección @media (max-width: 768px) actual y reemplázala toda por esta:
-
-CSS
 @media (max-width: 768px) {
-    /* 1. Ajuste General del Contenedor */
+    /* 1. Reset general para que nada se salga de la pantalla */
+    body {
+        overflow-x: hidden; /* Evita el movimiento lateral molesto */
+    }
+
+    /* 2. El contenedor principal debe ser fluido */
     main {
-        padding: 10px;
-        margin: 10px auto;
-    }
-
-    /* 2. Cabecera y Títulos */
-    header {
-        font-size: 1.4rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
         padding: 15px;
+        box-sizing: border-box; /* Fundamental para que el padding no sume ancho */
     }
 
-    header p {
-        font-size: 1rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    /* 3. Menú de Navegación Móvil */
+    /* 3. Navegación: Separamos los elementos para que no choquen */
     nav {
-        flex-direction: row; /* Mantiene Home y Botón alineados */
+        flex-direction: row; 
         justify-content: space-between;
-        padding: 8px 15px;
-    }
-
-    .home-link {
-        font-size: 0.75em;
-    }
-
-    .dropdown-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-
-    /* 4. CARRUSEL RE-ADAPTADO (Sin distorsión) */
-    .carousel-track-container {
-        height: 280px; /* Altura más baja para celular */
-    }
-
-    .carousel-track img {
-        height: 280px; /* Debe ser igual a la del contenedor */
-        object-fit: cover; /* Recorta los lados para no estirar */
-    }
-
-    /* 5. Galería de Fotos Estática */
-    .galeria {
+        padding: 10px 15px;
         gap: 10px;
     }
 
-    .galeria img {
-        width: 100%; /* Una foto debajo de otra */
-        height: auto;
-        max-width: 100%;
+    .home-link {
+        margin: 0;
+        font-size: 0.8rem;
     }
 
-    /* 6. Columnas de Texto e Info */
-    .columnas-texto {
-        grid-template-columns: 1fr; /* Apila las columnas */
-        gap: 15px;
+    .dropdown-btn {
+        font-size: 11px;
+        padding: 10px;
+        white-space: nowrap; /* Evita que el texto del botón se rompa en dos líneas */
     }
 
-    .parrafo-principal {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    .highlight-box {
-        font-size: 0.9rem;
-        padding: 15px;
-    }
-
-    .info-box {
-        font-size: 0.95rem;
-        padding: 15px;
+    /* 4. Carrusel: Ajustamos altura y evitamos desbordamiento */
+    .carousel {
+        width: 100%;
         margin: 20px 0;
     }
 
-    /* 7. Formulario de Contacto (si aplica) */
-    #contacto {
-        width: 90%;
-        padding: 15px;
+    .carousel-track-container {
+        height: 250px; /* Altura cómoda para el pulgar */
+        border-radius: 10px;
+    }
+
+    .carousel-track img {
+        height: 250px;
+        min-width: 100%;
+    }
+
+    /* 5. Galería: Una imagen debajo de otra con espacio */
+    .galeria {
+        display: block; /* Cambiamos flex por block para evitar amontonamiento */
+    }
+
+    .galeria img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 15px; /* Espacio entre fotos */
+    }
+
+    /* 6. Textos e Historia: Quitamos las columnas */
+    .columnas-texto {
+        display: block; /* Adiós al grid que amontona el texto */
+    }
+
+    . Historia-cancun p {
+        padding: 20px; /* Reducimos el padding exagerado de 40px */
+        font-size: 1rem;
+        margin: 15px 0;
+    }
+
+    .highlight-box {
+        font-size: 0.95rem;
+        margin-top: 10px;
+    }
+
+    /* 7. Encabezado */
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    header p {
+        font-size: 1rem;
     }
 }
            
