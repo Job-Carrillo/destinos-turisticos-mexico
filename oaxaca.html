@@ -9,7 +9,7 @@
         <style>
             body {
                 font-family: 'Segoe UI';
-                line-height: 17px;
+                line-height: 1.5;
                 color: #2c3e50;
                 background-color: #fdfaf5;
             }
@@ -21,6 +21,15 @@
                 margin: 0;
                 font-size: 2rem;
                   
+            }
+            header h1 {
+                margin: 0;
+                line-height: 1.1;
+            }
+            header p {
+                margin: 6px 0 0;
+                font-size: 1.1rem;
+                line-height: 1.3;
             }
             nav {
                 background: white; 
@@ -220,47 +229,68 @@
                 margin-top: 40px;
             }
             @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                padding: 10px;
-            }
+                header {
+                    padding: 12px;
+                    font-size: 1.5rem;
+                }
 
-            .logo-mexico {
-                margin: 0 auto 10px;
-                width: 120px;
-            }
+                header h1 {
+                    font-size: 1.5rem;
+                }
 
-            h1 {
-                font-size: 1.5rem;
-            }
+                header p {
+                    font-size: 1rem;
+                }
 
-            .menu-horizontal {
-                flex-direction: column;
-                align-items: center;
-            }
+                nav {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                    padding: 10px;
+                }
 
-            .menu-horizontal img {
-                width: 280px;
-                height: 180px;
-            }
+                main {
+                    padding: 15px;
+                }
 
-            .grid-formulario {
-                grid-template-columns: 1fr; 
-                gap: 20px;
-            }
+                .texto-principal h2 {
+                    font-size: 1.6rem;
+                    line-height: 1.3;
+                }
 
-            .label-centrada, #mensaje, .boton-enviar {
-                grid-column: span 1;
-            }
+                .texto-principal p {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    padding: 0 5px;
+                }
 
-            #contacto {
-                padding: 20px;
-            }
+                .galeria {
+                    flex-direction: column;
+                    align-items: center;
+                }
 
-            button[type="submit"] {
-                width: 100%; 
+                .galeria img {
+                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                .columnas-texto {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                    font-size: 1rem;
+                }
+
+                .info-box {
+                    font-size: 1rem;
+                    padding: 20px;
+                }
+
+                footer {
+                    text-align: center;
+                    font-size: 0.9rem;
+                }
             }
-        }
             
         </style>
     </head>
